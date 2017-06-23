@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>INDEX</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	</head>
+
+	<body>
+		<legend>BMI Calculator</legend>
+		<fieldset class="fieldset">
+			<label for="length">Length in cm:</label>
+			<input type="text" id="length" name="length" placeholder="180" required autofocus/>
+			<br/>
+			<label for="weight">Weight in kg:</label>
+			<input type="text" id="weight" name="weight" placeholder="77" required/>
+			<br/>
+			<input type="button" id="calculate" value="Calculate your BMI"/>
+		</fieldset>
+		<div id="result"></div>
+		<footer>
+			<h2>Kevin Streekstra, MD1A</h2>
+		</footer>
+		<script src="js/main.js"></script>
+		<script>
+			weight = document.getElementById("weight");
+			length = document.getElementById("length");
+
+            document.getElementById("calculate").addEventListener("click", ()=>{
+                ajax(weight.value, length.value);
+			});
+		</script>
+	</body>
+</html>
